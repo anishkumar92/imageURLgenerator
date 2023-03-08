@@ -1,7 +1,7 @@
 function loadImages() {
     var container = document.getElementById("image-container");
     var images = [];
-    fetch("./images/")
+    fetch("../images/")
       .then(response => response.text())
       .then(data => {
         var parser = new DOMParser();
@@ -23,7 +23,7 @@ function loadImages() {
   
   function downloadImageURLs() {
     var images = [];
-    fetch("./images/")
+    fetch("../images/")
       .then(response => response.text())
       .then(data => {
         var parser = new DOMParser();
