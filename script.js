@@ -7,7 +7,8 @@ function loadImages() {
         var parser = new DOMParser();
         var html = parser.parseFromString(data, "text/html");
         var links = html.querySelectorAll("a");
-        links.forEach(link => {
+        links.forEach((link,i) => {
+          console.log("links",link.href)
           if (link.href.endsWith(".jpg") || link.href.endsWith(".jpeg") || link.href.endsWith(".png")) {
             images.push(link.href);
           }
@@ -31,7 +32,7 @@ function loadImages() {
         var links = html.querySelectorAll("a");
         links.forEach(link => {
           if (link.href.endsWith(".jpg") || link.href.endsWith(".jpeg") || link.href.endsWith(".png")) {
-            images.push(window.location.href + link.href);
+            images.push(link.href.replace('http://127.0.0.1:5500/images/','https://raw.githubusercontent.com/anishkumar92/imageURLgenerator/main/images/'));
           }
         });
         var element = document.createElement("a");
