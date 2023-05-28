@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "gm": "^1.25.0",
+    "image-size": "^1.0.2",
+    "sharp": "^0.32.1",
+    "zip-folder": "^1.0.0"
+  }
+}
